@@ -1,0 +1,56 @@
+.pah .disruption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	position: fixed;
+    
+    &.hide {
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+    }
+
+    &.show {
+        display: block;
+    }
+
+    & .background {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        opacity: .35;
+        position: absolute;
+        background: black;
+    }
+
+    & .content {
+        top: 30px;
+        left: 50%;
+        width: 98%;
+        z-index: 1;
+        max-width: 1200px;
+        position: absolute;
+        transform: translateX(-50%);
+
+        & img {
+            width: 100%;
+        }
+
+        & .close {
+            top: 1em;
+            right: 1em;
+            z-index: 1;
+            cursor: pointer;
+            position: absolute;
+            
+            & svg {
+                fill: white;
+                stroke-width: 1px;
+                stroke: rgba(0,0,0,.5);
+            } 
+        }
+    }
+}
